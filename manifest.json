@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "name": "ThisIsReminder",
+    "description": "特定のサイトを踏んだときにリマインドするためのアプリ",
+    "browser_action": {
+        "default_icon": "./icons/speaker.png",
+        "default_title": "ThisIsReminder",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "./icons/speaker.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "activeTab",
+        "background",
+        "storage",
+        "tabs"
+    ],
+    "options_ui": {
+        "page":"options.html",
+        "chrome_style":true,
+        "open_in_tab":true
+    }
+}
