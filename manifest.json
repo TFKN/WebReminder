@@ -4,12 +4,12 @@
     "name": "ThisIsReminder",
     "description": "特定のサイトを踏んだときにリマインドするためのアプリ",
     "browser_action": {
-        "default_icon": "./icons/speaker.png",
+        "default_icon": "./icons/jobcan.png",
         "default_title": "ThisIsReminder",
         "default_popup": "popup.html"
     },
     "icons": {
-        "128": "./icons/speaker.png"
+        "128": "./icons/jobcan.png"
     },
     "background": {
         "scripts": [

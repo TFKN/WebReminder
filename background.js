@@ -4,18 +4,19 @@
  */
 
 chrome.tabs.onUpdated.addListener(function(tabId, info, tab){
+    console.log('Requested URL');
     console.log(tab.url);
-    target_url = 'https://www.irasutoya.com/search?q=%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC';
-    url_list
-    target_audio = './music/reminder.wav';
+    target_audio = './sounds/reminder.wav';
     if(info.status === "complete"){
-
-        if(tab.url === target_url){
-
-            var audio = new Audio();
-            audio.src = target_audio;
-            audio.load();
-            audio.play();
-        }
+        chrome.storage.local.get("URL", function (value) {
+            console.log('value.URL');
+            console.log(value.URL);
+            if(tab.url == value.URL){
+                var audio = new Audio();
+                audio.src = target_audio;
+                audio.load();
+                audio.play();
+            }
+        });
     }
 });
